@@ -44,9 +44,7 @@ const ContactPage = () => {
       formData.append("name", data.name);
       formData.append("email", data.email);
       formData.append("message", data.message);
-      // TODO: Replace with your own Web3Forms access key from https://web3forms.com
-      // Sign up with ksgsaketh@gmail.com to get your access key
-      formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+      formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "");
 
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -84,10 +82,10 @@ const ContactPage = () => {
         </div>
         <div className="space-y-6">
           {formStatus === "success" && (
-            <Alert className="bg-green-50 border-green-200 text-black">
-              <CheckCircle2 className="h-4 w-4 text-green-600" />
-              <AlertTitle>Message Sent Successfully!</AlertTitle>
-              <AlertDescription>
+            <Alert className="bg-green-500/10 border-green-500/30 dark:bg-green-500/10 dark:border-green-500/30">
+              <CheckCircle2 className="h-4 w-4 text-green-600 dark:text-green-400" />
+              <AlertTitle className="text-green-700 dark:text-green-300">Message Sent Successfully!</AlertTitle>
+              <AlertDescription className="text-green-600 dark:text-green-400">
                 Thank you for your message. I&apos;ll get back to you as soon as
                 possible.
               </AlertDescription>
@@ -95,10 +93,10 @@ const ContactPage = () => {
           )}
 
           {formStatus === "error" && (
-            <Alert className="bg-red-50 border-red-200">
-              <AlertCircle className="h-4 w-4 text-red-600" />
-              <AlertTitle>Something went wrong!</AlertTitle>
-              <AlertDescription>
+            <Alert className="bg-red-500/10 border-red-500/30 dark:bg-red-500/10 dark:border-red-500/30">
+              <AlertCircle className="h-4 w-4 text-red-600 dark:text-red-400" />
+              <AlertTitle className="text-red-700 dark:text-red-300">Something went wrong!</AlertTitle>
+              <AlertDescription className="text-red-600 dark:text-red-400">
                 There was a problem sending your message. Please try again later.
               </AlertDescription>
             </Alert>
