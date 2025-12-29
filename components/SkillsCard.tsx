@@ -1,8 +1,9 @@
 import React from 'react';
 import { Badge } from './ui/badge';
+import { LucideIcon } from 'lucide-react';
 
 type SkillsCardProps = {
-    icon: React.ElementType;
+    icon: LucideIcon;
     title: string;  
     skills: string[];
 };

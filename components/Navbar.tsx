@@ -18,13 +18,10 @@ const Navbar = () => {
                 <Link href="/" className="text-xl font-bold">
                     Saketh Kollipara | Portfolio
                 </Link>
-                <div className="hidden md:flex space-x-4 items-center">
+                <div className="hidden md:flex space-x-8 items-center">
                     <Link href="/" className='text-foreground/60 hover:text-foreground'>Home</Link>
-                    <span className='text-muted-foreground/30'>|</span>
                     <Link href="/about" className='text-foreground/60 hover:text-foreground'>About</Link>
-                    <span className='text-muted-foreground/30'>|</span>
                     <Link href="/projects" className='text-foreground/60 hover:text-foreground'>Projects</Link>
-                    <span className='text-muted-foreground/30'>|</span>
                     <Link href="/contact" className='text-foreground/60 hover:text-foreground'>Contact</Link>
                     <span className='text-muted-foreground/30'>|</span>
                     <a href="https://github.com/sakethksg" target="_blank" rel="noopener noreferrer" className='text-foreground/60 hover:text-foreground'><SiGithub className="w-6 h-6" /></a>
