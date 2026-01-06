@@ -1,7 +1,7 @@
 import AboutPreview from "@/components/home/AboutPreview"
 import FeaturedProjects from "@/components/home/FeaturedProjects"
 import Intro from "@/components/home/Intro"
-import DitherBackground from "@/components/DitherBackground"
+// import DitherBackground from "@/components/DitherBackground"
 
 const page = () => {
   return (
