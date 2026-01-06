@@ -26,7 +26,7 @@ export default function AceternityNavbar() {
   ];
 
   return (
-    <Navbar className="top-8">
+    <Navbar className="top-8 mt-0">
       {/* Desktop Navigation */}
       <NavBody className="border border-border/40 bg-background/95 backdrop-blur-md">
         {/* Logo */}
