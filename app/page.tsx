@@ -7,7 +7,7 @@ const page = () => {
   return (
     <main className="flex-grow relative">
       {/* Background Dither Effect */}
-      <DitherBackground />
+      {/* <DitherBackground /> */}
       
       {/* Content */}
       <div className="container mx-auto px-4 pt-16 pb-8">
